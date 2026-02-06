@@ -389,7 +389,6 @@ public class HBCApproximate {
         }
 
         if(!successResults.isEmpty()){
-            System.out.println("成功找到"+successResults.size()+"个节点对，已有"+successSample+"个节点对");
             successSample+=successResults.values().stream()
                     .mapToInt(Set::size)
                     .sum();
@@ -492,7 +491,6 @@ public class HBCApproximate {
                 sum += value;
             }
             double average = sum;
-            // 除以10000并存入新Map
             betweenness.put(entry.getKey(), average/Si);
         }
         return betweenness;
